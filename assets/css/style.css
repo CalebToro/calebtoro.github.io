@@ -553,13 +553,6 @@ button:focus-visible {
   margin-top: 35px;
 }
 
-.article-end {
-  margin: 42px 0;
-  color: var(--coral);
-  text-align: center;
-  font-size: 22px;
-}
-
 .listing-grid {
   margin: 10px 0 75px;
 }
