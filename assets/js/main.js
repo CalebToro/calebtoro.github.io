@@ -12,4 +12,32 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle.setAttribute("aria-expanded", String(open));
     });
   }
+
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (themeToggle) {
+    const updateThemeToggle = function () {
+      const isDark = document.documentElement.dataset.theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
+      );
+      themeToggle.title = isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro";
+    };
+
+    updateThemeToggle();
+    themeToggle.addEventListener("click", function () {
+      const nextTheme =
+        document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      localStorage.setItem("caleb-theme", nextTheme);
+
+      const themeColor = document.querySelector('meta[name="theme-color"]');
+      if (themeColor) {
+        themeColor.content = nextTheme === "dark" ? "#1b2438" : "#f6f2e9";
+      }
+
+      updateThemeToggle();
+    });
+  }
 });

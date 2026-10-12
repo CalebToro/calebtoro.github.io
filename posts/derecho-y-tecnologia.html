@@ -13,13 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;500&display=swap"
       rel="stylesheet"
     >
+    <script src="../assets/js/theme.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
   </head>
 
-  <body>
+  <body class="article-reading-page">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
     <header class="site-header">
@@ -41,10 +42,15 @@
           <a href="../index.html">Inicio</a>
           <a href="../sobre-mi.html">Sobre mí</a>
           <a href="../articulos.html" aria-current="page">Artículos</a>
-          <a href="../cuaderno.html">Cuaderno</a>
           <a href="../proyectos.html">Proyectos</a>
           <a href="../contacto.html">Contacto</a>
         </nav>
+
+        <button class="theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 12a8 8 0 0 1 16 0H4Zm-2 2h20v1.5H2zm4 4h12v1.5H6z"></path>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -52,14 +58,19 @@
       <article class="reading-column article-page">
         <a class="back-link" href="../articulos.html">← Volver a artículos</a>
 
-        <p class="eyebrow">ARTÍCULO · 11.10.26</p>
-        <h1 class="page-title">Derecho y tecnología: aprender a preguntar mejor</h1>
-        <p class="page-intro">
-          Ante cada herramienta nueva, además de preguntarnos qué puede hacer,
-          conviene pensar a quién afecta, qué cambia y qué responsabilidades aparecen.
-        </p>
+        <header class="article-heading">
+          <h1 class="page-title">Derecho y tecnología: aprender a preguntar mejor</h1>
+          <p class="article-date">
+            <time datetime="2026-10-11">11 de octubre de 2026</time>
+          </p>
+        </header>
 
         <div class="prose">
+          <p>
+            Ante cada herramienta nueva, además de preguntarnos qué puede hacer,
+            conviene pensar a quién afecta, qué cambia y qué responsabilidades aparecen.
+          </p>
+
           <p>
             La tecnología suele llegar acompañada de promesas: hacer las cosas más
             rápido, conectar a más personas o resolver tareas que antes parecían
@@ -68,7 +79,6 @@
             consecuencias tiene en la vida cotidiana.
           </p>
 
-          <h2>Mirar más allá de la herramienta</h2>
           <p>
             El derecho puede ayudar a ordenar algunas de esas preguntas. ¿Qué datos
             se recopilan? ¿Quién toma las decisiones? ¿Qué opciones tiene una persona
@@ -76,12 +86,6 @@
             comprender mejor el contexto en el que ocurre.
           </p>
 
-          <blockquote>
-            Una buena pregunta puede ser el primer paso para usar una herramienta
-            con más criterio.
-          </blockquote>
-
-          <h2>Aprender mientras cambia el entorno</h2>
           <p>
             No siempre hay respuestas definitivas, sobre todo cuando las prácticas y
             las reglas todavía están evolucionando. Por eso sirve leer, conversar y
@@ -97,6 +101,12 @@
           </p>
         </div>
 
+        <nav class="article-pagination" aria-label="Navegación entre artículos">
+          <a class="back-link" href="aprender-en-publico.html">← Artículo anterior</a>
+          <a class="back-link" href="ley-comunal.html">Artículo siguiente →</a>
+        </nav>
+
+        <a class="back-link" href="../articulos.html">← Volver a artículos</a>
       </article>
     </main>
 
